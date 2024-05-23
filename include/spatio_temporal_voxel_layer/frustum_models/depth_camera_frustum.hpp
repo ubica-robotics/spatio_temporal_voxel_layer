@@ -78,6 +78,9 @@ private:
   Eigen::Vector3d _position;
   Eigen::Quaterniond _orientation;
   bool _valid_frustum;
+  std::vector<Eigen::Vector3d> _frustum_pts;
+  rclcpp::Node::SharedPtr _node;
+  rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr _frustum_pub;
 };
 
 }  // namespace geometry
